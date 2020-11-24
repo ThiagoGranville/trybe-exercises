@@ -5,3 +5,7 @@ nav li{
 nav a{
 text-decoration: none;
 }
+
+h3{
+  font-style: italic;
+}
