@@ -1,15 +1,19 @@
-nav li{
+nav li {
   display: inline;
 }
 
-nav a{
+nav a {
 text-decoration: none;
 }
 
-h3{
+h3 {
   font-style: italic;
 }
 
-img{
+img {
   width: 300px;
+}
+
+aside {
+  float: right;
 }
