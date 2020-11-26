@@ -21,7 +21,8 @@ valorINSS = salarioBruto * aliquotaINSS;
 salarioBase = salarioBruto - valorINSS;
 
 if (salarioBase <= 1903.98) {
-  salarioLiquido = salarioBase;
+  parcelaIR= 0;
+  aliquotaIR = 0;
 } else if (salarioBase <= 2826.65) {
   parcelaIR = 142.8;
   aliquotaIR = 0.075;
