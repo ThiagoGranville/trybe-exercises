@@ -1,4 +1,4 @@
-let nota = 110;
+let nota = 80;
 
 switch (true) {
   case nota < 0 || nota > 100:
@@ -29,4 +29,3 @@ switch (true) {
     console.log('Nota: F');
     break;
 }
-
