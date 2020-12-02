@@ -1,4 +1,4 @@
-let arrayTeste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+const arrayTeste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 
 function descobrirMaiorNome(array) {
   let maiorNome = array[0];

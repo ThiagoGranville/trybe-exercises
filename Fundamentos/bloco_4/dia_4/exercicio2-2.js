@@ -1,4 +1,4 @@
-let arrayTeste = [2, 3, 6, 7, 10, 1];
+const arrayTeste = [2, 3, 6, 7, 10, 1];
 
 function indiceDeMaiorValor(array) {
   let maiorValor = array[0];

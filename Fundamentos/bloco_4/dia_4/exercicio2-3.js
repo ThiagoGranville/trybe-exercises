@@ -1,4 +1,4 @@
-let arrayTeste = [2, 4, 6, 7, 10, 0, -3];
+const arrayTeste = [2, 4, 6, 7, 10, 0, -3];
 
 function indiceDeMenorValor(array) {
   let menorValor = array[0];
