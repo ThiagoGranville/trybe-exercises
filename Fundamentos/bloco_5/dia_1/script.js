@@ -36,4 +36,11 @@ function changeTextToUpperCase() {
 }
 changeTextToUpperCase();
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+function showParagraphsOnConsole() {
+       let paragraphs = document.getElementsByTagName('p');
+       for(let index = 0; index < paragraphs.length; index += 1){
+              console.log(paragraphs[index].innerText);
+       }
+}
+showParagraphsOnConsole();
        
