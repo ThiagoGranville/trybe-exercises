@@ -24,6 +24,11 @@ function changeCenterRectangleColor() {
 }
 changeCenterRectangleColor();
 //  Crie uma função que corrija o texto da tag <h1>.
+function changeMainTitleText() {
+  let mainTitle = document.getElementsByClassName('title')[0];
+  mainTitle.innerText = 'Exercício 5.1 - JavaScript';
+}
+changeMainTitleText();
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
        
