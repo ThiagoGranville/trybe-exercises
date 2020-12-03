@@ -18,6 +18,11 @@ function changeMainRectangleColor() {
 }
 changeMainRectangleColor();
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
+function changeCenterRectangleColor() {
+       let centerRectangle = document.getElementsByClassName('center-content')[0];
+       centerRectangle.style.backgroundColor = 'white';
+}
+changeCenterRectangleColor();
 //  Crie uma função que corrija o texto da tag <h1>.
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
