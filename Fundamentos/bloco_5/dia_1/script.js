@@ -12,6 +12,11 @@ function changeText() {
 }
 changeText();
 //  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+function changeMainRectangleColor() {
+       let mainRectangle = document.getElementsByClassName('main-content')[0];
+       mainRectangle.style.backgroundColor = 'rgb(76,164,109)';
+}
+changeMainRectangleColor();
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
 //  Crie uma função que corrija o texto da tag <h1>.
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
