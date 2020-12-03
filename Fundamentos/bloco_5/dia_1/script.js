@@ -8,7 +8,7 @@
 //  Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
 function changeText() {
        let paragraph = document.getElementsByTagName('p')[1];
-       paragraph.innerText = 'Me vejo trabalhando com o que gosto e fazendo as pessoas a minha volta felizes';
+       paragraph.innerText = 'Me vejo trabalhando com o que gosto e fazendo as pessoas a minha volta felizes.';
 }
 changeText();
 //  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
@@ -30,5 +30,10 @@ function changeMainTitleText() {
 }
 changeMainTitleText();
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+function changeTextToUpperCase() {
+       let defaultText = document.getElementsByTagName('p')[0];
+       defaultText.innerText = defaultText.innerText.toUpperCase();
+}
+changeTextToUpperCase();
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
        
