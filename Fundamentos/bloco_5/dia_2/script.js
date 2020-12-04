@@ -17,3 +17,7 @@ centerContent.appendChild(paragraph);
 leftContent = document.createElement('div');
 leftContent.className = 'left-content';
 mainContent.appendChild(leftContent);
+
+rightContent = document.createElement('div');
+rightContent.className = 'right-content';
+mainContent.appendChild(rightContent);
