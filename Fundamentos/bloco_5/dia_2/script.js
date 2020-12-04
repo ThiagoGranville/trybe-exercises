@@ -1,29 +1,57 @@
-h1Title = document.createElement('h1');
+const h1Title = document.createElement('h1');
 h1Title.innerText = 'Exercício 5.2 - JavaScript DOM';
 document.body.appendChild(h1Title);
 
-mainContent = document.createElement('div');
+const mainContent = document.createElement('div');
 mainContent.className = 'main-content';
 document.body.appendChild(mainContent);
 
-centerContent = document.createElement('div');
+const centerContent = document.createElement('div');
 centerContent.className = 'center-content';
 mainContent.appendChild(centerContent);
 
-paragraph = document.createElement('p');
-paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus vitae hic quibusdam deleniti consectetur, totam quasi quae reprehenderit excepturi, blanditiis quod fugiat accusamus nulla, temporibus at cupiditate. Placeat, eveniet.';
+const paragraph = document.createElement('p');
+paragraph.innerText =
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus vitae hic quibusdam deleniti consectetur, totam quasi quae reprehenderit excepturi, blanditiis quod fugiat accusamus nulla, temporibus at cupiditate. Placeat, eveniet.';
 centerContent.appendChild(paragraph);
 
-leftContent = document.createElement('div');
+const leftContent = document.createElement('div');
 leftContent.className = 'left-content';
 mainContent.appendChild(leftContent);
 
-rightContent = document.createElement('div');
+const rightContent = document.createElement('div');
 rightContent.className = 'right-content';
 mainContent.appendChild(rightContent);
 
-image = document.createElement('img');
+const image = document.createElement('img');
 image.src = 'https://picsum.photos/200';
 image.className = 'small-image';
 leftContent.appendChild(image);
 
+const list = document.createElement('ul');
+
+const numeros = {
+  1: 'Um',
+  2: 'Dois',
+  3: 'Três',
+  4: 'Quatro',
+  5: 'Cinco',
+  6: 'Seis',
+  7: 'Sete',
+  8: 'Oito',
+  9: 'Nove',
+  10: 'Dez',
+};
+
+for (let numero in numeros) {
+  const listItem = document.createElement('li');
+  listItem.innerText = numeros[numero];
+  list.appendChild(listItem);
+}
+rightContent.appendChild(list);
+
+
+for (let index = 0; index < 3; index += 1) {
+  const h3Subtitulo = document.createElement('h3');
+  mainContent.appendChild(h3Subtitulo);
+}
