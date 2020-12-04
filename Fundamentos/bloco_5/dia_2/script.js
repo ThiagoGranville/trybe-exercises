@@ -58,3 +58,5 @@ for (let index = 0; index < 3; index += 1) {
 }
 
 mainContent.removeChild(leftContent);
+
+rightContent.style.marginRight = 'auto';
