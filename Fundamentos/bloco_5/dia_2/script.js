@@ -62,3 +62,6 @@ mainContent.removeChild(leftContent);
 rightContent.style.marginRight = 'auto';
 
 centerContent.parentNode.style.backgroundColor = 'green';
+
+list.lastChild.previousSibling.remove();
+list.lastChild.remove();
