@@ -38,5 +38,15 @@ for (let day of dezDaysList) {
   }
 
   days.appendChild(daysItem);
-
 }
+
+function createHolidayButton (string) {
+  holidayButton = document.createElement('button');
+  holidayButton.innerText = string;
+  holidayButton.id = 'btn-holiday';
+
+  buttonContainer = document.querySelector('.buttons-container');
+  buttonContainer.appendChild(holidayButton);
+}
+
+createHolidayButton('Feriados');
