@@ -25,7 +25,7 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 const days = document.querySelector('#days');
 
 for (let day of dezDaysList) {
-  daysItem = document.createElement('li');
+ const daysItem = document.createElement('li');
   daysItem.className = 'day'
   daysItem.innerText = day;
 
@@ -41,12 +41,29 @@ for (let day of dezDaysList) {
 }
 
 function createHolidayButton (string) {
-  holidayButton = document.createElement('button');
+const holidayButton = document.createElement('button');
   holidayButton.innerText = string;
   holidayButton.id = 'btn-holiday';
 
-  buttonContainer = document.querySelector('.buttons-container');
+const buttonContainer = document.querySelector('.buttons-container');
   buttonContainer.appendChild(holidayButton);
 }
 
 createHolidayButton('Feriados');
+
+function createClickEventForHolidayButton() {
+  const holidayButton = document.querySelector('#btn-holiday');
+  const holidays = document.querySelectorAll('.holiday');
+
+  holidayButton.addEventListener('click', function () {
+    for (const holiday of holidays) {
+      if (holiday.style.backgroundColor === 'orange') {
+        holiday.style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        holiday.style.backgroundColor = 'orange';
+      }
+    }
+  });
+}
+
+createClickEventForHolidayButton();
