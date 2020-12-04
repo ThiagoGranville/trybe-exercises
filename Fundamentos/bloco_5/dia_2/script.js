@@ -56,3 +56,5 @@ for (let index = 0; index < 3; index += 1) {
   h3Subtitulo.className = 'description'
   mainContent.appendChild(h3Subtitulo);
 }
+
+mainContent.removeChild(leftContent);
