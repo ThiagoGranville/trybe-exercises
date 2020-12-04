@@ -50,7 +50,6 @@ for (let numero in numeros) {
 }
 rightContent.appendChild(list);
 
-
 for (let index = 0; index < 3; index += 1) {
   const h3Subtitulo = document.createElement('h3');
   mainContent.appendChild(h3Subtitulo);
