@@ -1,5 +1,6 @@
 const h1Title = document.createElement('h1');
 h1Title.innerText = 'Exercício 5.2 - JavaScript DOM';
+h1Title.className = 'title'
 document.body.appendChild(h1Title);
 
 const mainContent = document.createElement('div');
