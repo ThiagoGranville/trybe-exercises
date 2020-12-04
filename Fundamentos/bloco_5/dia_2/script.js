@@ -21,3 +21,9 @@ mainContent.appendChild(leftContent);
 rightContent = document.createElement('div');
 rightContent.className = 'right-content';
 mainContent.appendChild(rightContent);
+
+image = document.createElement('img');
+image.src = 'https://picsum.photos/200';
+image.className = 'small-image';
+leftContent.appendChild(image);
+
