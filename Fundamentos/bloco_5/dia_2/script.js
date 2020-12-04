@@ -13,3 +13,7 @@ mainContent.appendChild(centerContent);
 paragraph = document.createElement('p');
 paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus vitae hic quibusdam deleniti consectetur, totam quasi quae reprehenderit excepturi, blanditiis quod fugiat accusamus nulla, temporibus at cupiditate. Placeat, eveniet.';
 centerContent.appendChild(paragraph);
+
+leftContent = document.createElement('div');
+leftContent.className = 'left-content';
+mainContent.appendChild(leftContent);
