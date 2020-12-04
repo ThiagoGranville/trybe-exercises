@@ -53,5 +53,6 @@ rightContent.appendChild(list);
 
 for (let index = 0; index < 3; index += 1) {
   const h3Subtitulo = document.createElement('h3');
+  h3Subtitulo.className = 'description'
   mainContent.appendChild(h3Subtitulo);
 }
