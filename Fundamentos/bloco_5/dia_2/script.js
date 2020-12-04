@@ -9,3 +9,7 @@ document.body.appendChild(mainContent);
 centerContent = document.createElement('div');
 centerContent.className = 'center-content';
 mainContent.appendChild(centerContent);
+
+paragraph = document.createElement('p');
+paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus vitae hic quibusdam deleniti consectetur, totam quasi quae reprehenderit excepturi, blanditiis quod fugiat accusamus nulla, temporibus at cupiditate. Placeat, eveniet.';
+centerContent.appendChild(paragraph);
