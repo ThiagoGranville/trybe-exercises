@@ -121,3 +121,13 @@ function dayMouseOut() {
 }
 
 dayMouseOut();
+
+function addNewAssignment(string) {
+  const myTasks = document.querySelector('.my-tasks');
+  const task = document.createElement('span');
+
+  task.innerText = string;
+  myTasks.appendChild(task);
+}
+
+addNewAssignment("Cozinhar");
