@@ -21,24 +21,28 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
+
+function renderDaysOnCalendar() {
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const days = document.querySelector('#days');
+  for (let day of dezDaysList) {
+    const daysItem = document.createElement('li');
+    daysItem.className = 'day';
+    daysItem.innerText = day;
 
-for (let day of dezDaysList) {
- const daysItem = document.createElement('li');
-  daysItem.className = 'day'
-  daysItem.innerText = day;
+    if (day === 24 || day === 25 || day === 31) {
+      daysItem.className += ' holiday';
+    }
 
-  if (day === 24 || day === 25 || day === 31) {
-    daysItem.className += ' holiday'
-  } 
-  
-  if (day === 4 || day === 11 || day === 18 || day === 25) {
-    daysItem.className += ' friday'
+    if (day === 4 || day === 11 || day === 18 || day === 25) {
+      daysItem.className += ' friday';
+    }
+
+    days.appendChild(daysItem);
   }
-
-  days.appendChild(daysItem);
 }
+
+renderDaysOnCalendar();
 
 function createHolidayButton (string) {
 const holidayButton = document.createElement('button');
@@ -67,3 +71,14 @@ function createClickEventForHolidayButton() {
 }
 
 createClickEventForHolidayButton();
+
+function createFridayButton(string) {
+  const fridayButton = document.createElement('button');
+  fridayButton.innerText = string;
+  fridayButton.id = 'btn-friday';
+
+  const buttonContainer = document.querySelector('.buttons-container');
+  buttonContainer.appendChild(fridayButton);
+}
+
+createFridayButton('Sexta-feira');
