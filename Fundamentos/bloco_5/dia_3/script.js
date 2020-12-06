@@ -101,3 +101,23 @@ function createClickEventForFridayButton() {
 }
 
 createClickEventForFridayButton();
+
+function dayMouseOverZoom () {
+  const days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+  })
+}
+
+dayMouseOverZoom();
+
+function dayMouseOut() {
+  const days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '20px';
+  });
+}
+
+dayMouseOut();
