@@ -131,3 +131,13 @@ function addNewAssignment(string) {
 }
 
 addNewAssignment("Cozinhar");
+
+function addColorLegend(color) {
+  const myTasks = document.querySelector('.my-tasks');
+  const colorLegend = document.createElement('div');
+
+  colorLegend.style.backgroundColor = color;
+  myTasks.appendChild(colorLegend);
+} 
+
+addColorLegend("cyan");
