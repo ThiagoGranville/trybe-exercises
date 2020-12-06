@@ -59,8 +59,8 @@ function createClickEventForHolidayButton() {
   const holidayButton = document.querySelector('#btn-holiday');
   const holidays = document.querySelectorAll('.holiday');
 
-  holidayButton.addEventListener('click', function () {
-    for (const holiday of holidays) {
+  holidayButton.addEventListener('click', function() {
+    for (let holiday of holidays) {
       if (holiday.style.backgroundColor === 'orange') {
         holiday.style.backgroundColor = 'rgb(238,238,238)';
       } else {
@@ -82,3 +82,22 @@ function createFridayButton(string) {
 }
 
 createFridayButton('Sexta-feira');
+
+function createClickEventForFridayButton() {
+  const fridayButton = document.querySelector('#btn-friday');
+  const fridays = document.querySelectorAll('.friday');
+  const fridaysValue = [];
+ 
+  fridayButton.addEventListener('click', function () {
+    for (let index = 0; index < fridays.length; index += 1) {
+      fridaysValue.push(fridays[index].innerText);
+      if (fridays[index].innerText !== 'SEXTOU!') {
+        fridays[index].innerText = 'SEXTOU!';
+      } else {
+        fridays[index].innerText = fridaysValue[index];
+      }
+    }
+  });
+}
+
+createClickEventForFridayButton();
