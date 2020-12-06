@@ -135,6 +135,7 @@ addNewAssignment("Cozinhar");
 function addColorLegend(color) {
   const myTasks = document.querySelector('.my-tasks');
   const colorLegend = document.createElement('div');
+  colorLegend.className = 'task';
 
   colorLegend.style.backgroundColor = color;
   myTasks.appendChild(colorLegend);
