@@ -156,3 +156,17 @@ function selectTask() {
 
 selectTask();
 
+function fillColorWithSelectedTask() {
+  const days = document.querySelector('#days');
+  days.addEventListener('click', function(event) {
+    const selectedTask = document.querySelector('.selected');
+    let taskColor = selectedTask.style.backgroundColor;
+    if (event.target.style.color === taskColor) {
+      event.target.style.color = 'rgb(119, 119, 119)';
+    } else {
+      event.target.style.color = taskColor;
+    }
+  })
+}
+
+fillColorWithSelectedTask();
