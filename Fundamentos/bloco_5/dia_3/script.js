@@ -142,3 +142,17 @@ function addColorLegend(color) {
 } 
 
 addColorLegend("cyan");
+
+function selectTask() {
+  const myTask = document.querySelector('.task');
+  myTask.addEventListener('click', function () {
+    if (myTask.className !== 'task selected') {
+      myTask.className = 'task selected';
+    } else {
+      myTask.className = 'task';
+    }
+  });
+}
+
+selectTask();
+
