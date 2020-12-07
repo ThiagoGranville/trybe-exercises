@@ -170,3 +170,26 @@ function fillColorWithSelectedTask() {
 }
 
 fillColorWithSelectedTask();
+
+function addAppointment() {
+  const inputAppointment = document.querySelector('#task-input');
+  const buttonAdd = document.querySelector('#btn-add');
+  const appointmentList = document.querySelector('.task-list');
+
+  function addAppointmentToList(event) {
+    if (event.keyCode === 13 || event.type === 'click') {
+      if (inputAppointment.value !== '') {
+        const newAppointment = document.createElement('li');
+        newAppointment.className = 'appointment';
+        newAppointment.innerText = inputAppointment.value;
+        appointmentList.appendChild(newAppointment);
+      } else {
+        alert('ERRO: Não é possivel criar um compromisso vazio!');
+      }
+    }
+  }
+  buttonAdd.addEventListener('click', addAppointmentToList);
+  inputAppointment.addEventListener('keyup', addAppointmentToList);
+}
+
+addAppointment();
