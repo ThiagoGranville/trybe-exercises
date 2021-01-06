@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./script.js"></script>
+  <title>Exercício 6.1</title>
+</head>
+
+<body>
+  <h1>FORMULÁRIO</h1>
+  <form action="" method="GET" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <div>
+        <label for="name-field">Nome:</label>
+        <input type="text" name="nome" id="name-field" maxlength="40" required />
+      </div>
+
+      <div>
+        <label for="email-field">Email:</label>
+        <input type="email" name="email" id="email-field" maxlength="50" required />
+      </div>
+
+      <div>
+        <label for="cpf-field">CPF:</label>
+        <input type="text" name="cpf" id="cpf-field" maxlength="11" required />
+      </div>
+
+      <div>
+        <label for="adress-field">Endereço:</label>
+        <input type="text" name="endereco" id="adress-field" maxlength="200" required />
+      </div>
+
+      <div>
+        <label for="city-field">Cidade:</label>
+        <input type="text" name="cidade" id="city-field" maxlength="28" required />
+      </div>
+
+      <div>
+        <label for="state-field">Estado:</label>
+        <select name="estado" id="state-field" required></select>
+      </div>
+
+      <div>
+        <p>Tipo de residência:</p>
+        <input type="radio" name="tipo-residencia" id="apt-input" required />
+        <label for="apt-input">Apartamento</label>
+        <input type="radio" name="tipo-residencia" id="house-input" required />
+        <label for="house-input">Casa</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados do seu último emprego</legend>
+
+      <div>
+        <label for="resume-field">Resumo do currículo:</label>
+        <textarea name="curriculo" id="resume-field" cols="30" rows="10" maxlength="1000" required></textarea>
+      </div>
+
+      <div>
+        <label for="role-field">Cargo:</label>
+        <input type="text" name="cargo" id="role-field" maxlength="40" required />
+      </div>
+
+      <div>
+        <label for="role-description">Descrição do cargo:</label>
+        <textarea name="cargoDescricao" id="role-description" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <label for="start-date">Data de inicio:</label>
+        <input type="text" name="data" id="start-date" maxlength="10" placeholder="dd/mm/aaaa" required />
+      </div>
+    </fieldset>
+  </form>
+  <div>
+    <button id="sendButton" type="button">Enviar!</button>
+  </div>
+</body>
+
+</html>
