@@ -34,21 +34,21 @@ const order = {
   },
 };
 
-const customerInfo = (order) => {
+const customerInfo = order => {
   
-  console.log(`Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`);
+  return `Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`;
 
 }
 
-customerInfo(order);
+console.log(customerInfo(order));
 
-const orderModifier = (order) => {
+const orderModifier = order => {
   
   const newName = order.name = 'Luiz Silva';
   const newTotal = order.payment.total = 50;
 
-  console.log(`Olá ${newName}, o total do seu pedido de ${Object.keys(order.order.pizza)} e ${order.order.drinks.coke.type} é R$ ${newTotal}.`);
+  return `Olá ${newName}, o total do seu pedido de ${Object.keys(order.order.pizza)} e ${order.order.drinks.coke.type} é R$ ${newTotal}.`;
 
 }
 
-orderModifier(order);
+console.log(orderModifier(order));
