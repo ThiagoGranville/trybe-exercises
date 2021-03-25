@@ -1,9 +1,8 @@
 import { LOGIN } from './actionTypes';
 
-const registerUser = (email, password) => ({
+const registerUser = (login) => ({
   type: LOGIN,
-  email,
-  password,
+  login,
 });
 
 export default registerUser;

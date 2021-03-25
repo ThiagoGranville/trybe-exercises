@@ -1,10 +1,8 @@
-import REGISTER_USER from './actionTypes';
+import { REGISTER_USER } from './actionTypes';
 
-const registerUser = (age, name, email) => ({
+const registerUser = (user) => ({
   type: REGISTER_USER,
-  age,
-  name,
-  email,
+  user,
 });
 
 export default registerUser;

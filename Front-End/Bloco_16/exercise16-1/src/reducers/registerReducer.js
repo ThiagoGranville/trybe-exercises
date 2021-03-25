@@ -1,19 +1,12 @@
-import REGISTER_USER from '../actions/actionTypes';
+import { REGISTER_USER } from '../actions/actionTypes';
 
-const INITIAL_STATE = {
-  age: 0,
-  name: '',
-  email: '',
-}
+const INITIAL_STATE = [];
 
 const registerReducer = (state = INITIAL_STATE, action) => {
+  const user = action.user;
   switch(action.type) {
     case REGISTER_USER:
-      return {...state,
-        age: action.age,
-        name: action.name,
-        email: action.email,
-      };
+      return state.concat(user);
     default:
       return state;
   }
