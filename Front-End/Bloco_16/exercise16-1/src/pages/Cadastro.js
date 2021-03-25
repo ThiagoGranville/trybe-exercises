@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import registerAction from '../actions/registerAction';
+import { Link } from 'react-router-dom';
 
 class Cadastro extends Component {
   constructor(props) {
@@ -28,23 +29,31 @@ class Cadastro extends Component {
   }
 
   render() {
-    const { age, name, email } = this.state;
-    const { sendInfo } = this.props;
+    const { age, name, email,  } = this.state;
+    const { sendInfo, loginStatus } = this.props;
     return (
       <div>
-        <form>
+        { loginStatus ?
+        (<form>
           <input name="age" type="number" placeholder="idade" onChange={this.handleChange}></input>
           <input name="name" type="text" placeholder="Nome" onChange={this.handleChange}></input>
           <input name="email" type="email" placeholder="E-mail" onChange={this.handleChange}></input>
-          <button type="button" onClick={() => { sendInfo(age, name, email) }}>Cadastrar</button>
-        </form>
+          <button type="button" onClick={() => { sendInfo({ age, name, email }) }}>Cadastrar</button>
+          <Link to='/users'>Página de usuários</Link>
+        </form>)
+        : <p>Login não efetuado</p>
+        }
       </div>
     );
   }
 }
 
-const MapDispatchToProps = (dispatch) => ({
-  sendInfo: (idade, nome, email) => dispatch(registerAction(idade, nome, email))
+const mapDispatchToProps = (dispatch) => ({
+  sendInfo: (user) => dispatch(registerAction(user)),
 });
 
-export default connect(null, MapDispatchToProps)(Cadastro);
+const mapStateToProps = (state) => ({
+  loginStatus: state.loginReducer.login,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cadastro);

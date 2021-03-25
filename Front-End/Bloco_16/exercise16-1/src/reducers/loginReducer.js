@@ -1,22 +1,18 @@
 import { LOGIN } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
-  age: 0,
-  name: '',
-  email: '',
+  login: false,
 }
 
-const registerReducer = (state = INITIAL_STATE, action) => {
+const loginReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
-    case REGISTER_USER:
+    case LOGIN:
       return {...state,
-        age: action.age,
-        name: action.name,
-        email: action.email,
+        login: action.login,
       };
     default:
       return state;
   }
 };
 
-export default registerReducer;
+export default loginReducer;
